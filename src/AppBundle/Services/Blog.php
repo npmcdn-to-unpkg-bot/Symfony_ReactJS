@@ -12,12 +12,13 @@
 namespace AppBundle\Services;
 
 use AppBundle\Entity\Article;
-use AppBundle\Form\ArticleAddType;
+use AppBundle\Form\Tupe\Add\ArticleAddType;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\Form\FormFactory;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
+use Symfony\Component\Serializer\Serializer;
 
 class Blog
 {
@@ -42,19 +43,26 @@ class Blog
     private $user;
 
     /**
+     * @var Serializer
+     */
+    private $serializer;
+
+    /**
      * Blog constructor.
      *
      * @param EntityManager $doctrine
      * @param FormFactory $form
      * @param Session $session
      * @param TokenStorage $user
+     * @param Serializer $serializer
      */
-    public function __construct(EntityManager $doctrine, FormFactory $form, Session $session, TokenStorage $user)
+    public function __construct(EntityManager $doctrine, FormFactory $form, Session $session, TokenStorage $user, Serializer $serializer)
     {
         $this->doctrine = $doctrine;
         $this->form = $form;
         $this->session = $session;
         $this->user = $user;
+        $this->serializer = $serializer;
     }
 
     /**
@@ -63,12 +71,18 @@ class Blog
     public function getArticles()
     {
         $articles = $this->doctrine->getRepository('AppBundle:Article')->findAll();
+
+        $this->serializer->serialize($articles, 'json');
+
+        return $articles;
     }
 
     /**
      * Allow to create a new Article.
      *
      * @param Request $request
+     *
+     * @return \Symfony\Component\Form\FormInterface
      */
     public function createArticle(Request $request)
     {
