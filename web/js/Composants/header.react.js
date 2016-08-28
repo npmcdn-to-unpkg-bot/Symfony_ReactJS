@@ -1,9 +1,16 @@
 var HeaderBox = React.createClass({
-   render() {
+    render() {
        return(
-           <p>Du texte !</p>
+           <div>
+               <ul>
+                   <li><a>Accueil</a></li>
+                   <li><a>Blog</a></li>
+                   <li><a>Labs</a></li>
+                   <li><a>Forums</a></li>
+               </ul>
+           </div>
        );
-   }
+    }
 });
 
 ReactDOM.render(

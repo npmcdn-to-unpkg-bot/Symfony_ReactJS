@@ -1,12 +1,12 @@
-var Hello = React.createClass({
-   render() {
+var IndexBox = React.createClass({
+    render() {
        return(
            <h1>hello World !</h1>
        );
-   }
+    }
 });
 
 ReactDOM.render(
-    <Hello />,
+    <IndexBox />,
     document.getElementById('home')
 );

@@ -1,0 +1,36 @@
+/** List of styles used in this case **/
+
+/** Navbar **/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+/** Body **/
+
+body {
+    overflow-x: hidden;
+}
+
+/** Footer **/
+
+footer {
+    background-color: whitesmoke;
+    height: auto;
+}
