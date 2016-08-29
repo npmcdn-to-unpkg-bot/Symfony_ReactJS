@@ -12,8 +12,3 @@ var HeaderBox = React.createClass({
        );
     }
 });
-
-ReactDOM.render(
-    <HeaderBox />,
-    document.getElementById('header')
-);

@@ -28,19 +28,9 @@ var ArticleBox = React.createClass({
 // The body bloc of our page
 
 var IndexBox = React.createClass({
-    getInitialState() {
-        return{
-            data: []
-        };
-    },
     render() {
        return(
            <ArticleBox />
        );
     }
 });
-
-ReactDOM.render(
-    <IndexBox />,
-    document.getElementById('home')
-);

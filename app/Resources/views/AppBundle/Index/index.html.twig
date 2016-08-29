@@ -3,3 +3,15 @@
 {% block body %}
     <div id="home"></div>
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/request.js') }}"></script>
+    <script src="{{ asset('js/Composants/index.react.js') }}" type="text/babel"></script>
+    <script>
+        ReactDOM.render(
+                <IndexBox/>,
+                document.getElementById('home')
+        );
+    </script>
+{% endblock %}

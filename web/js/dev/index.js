@@ -1,21 +1,14 @@
 import React from "react";
 import { render } from "react-dom";
 
-// Externals componants
-import { Header } from "./Composants/header";
+import { ArticleBox } from "./Composants/article_box";
 
-
-class Index extends React.Component {
+class IndexBox extends React.Component {
     render() {
         return (
-            <div>
-                <Header />
-                <h1>Hello World !</h1>
-            </div>
+            <ArticleBox/>
         );
     }
 }
 
-render(<Index/>, document.getElementById('home'));
-
-
+render(<IndexBox />, document.getElementById('home'));
