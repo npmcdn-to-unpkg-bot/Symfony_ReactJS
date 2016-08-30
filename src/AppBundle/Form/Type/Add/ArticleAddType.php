@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Form\Tupe\Add;
+namespace AppBundle\Form\Type\Add;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;

@@ -13,7 +13,6 @@ class BlogController extends Controller
     /**
      * @Route("/blog/add/article", name="blog_add_article")
      * @Template("UI/Form/add_article.html.twig")
-     * @Method("POST")
      *
      * @param Request $request
      *
@@ -27,6 +26,6 @@ class BlogController extends Controller
             return $this->redirectToRoute('homepage');
         }
 
-        return array('article' => $article);
+        return array('article' => $article->createView());
     }
 }

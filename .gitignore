@@ -15,4 +15,10 @@
 /vendor/
 /web/bundles/
 /node_modules/
+
+# Personnel files
 .idea/
+
+# ReactJS files compiled
+web/js/app/React/*
+web/js/prod/*

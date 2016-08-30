@@ -12,7 +12,7 @@
 namespace AppBundle\Services;
 
 use AppBundle\Entity\Article;
-use AppBundle\Form\Tupe\Add\ArticleAddType;
+use AppBundle\Form\Type\Add\ArticleAddType;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\Form\FormFactory;
 use Symfony\Component\HttpFoundation\Request;

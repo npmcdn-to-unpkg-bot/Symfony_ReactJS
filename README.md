@@ -1,4 +1,4 @@
-# ReactJS into Symfony !
+# ReactJS into Symfony 3 !
 
 Here it's the source code of the developpez.com tutorial about using ReactJS into Symfony 3, in order to use it like it need to be used, follow this simple step :
 
@@ -28,17 +28,17 @@ In order to build the "dynamic" part of the application, we use Webpack and Reac
 npm build
 ```
 
-This command gonna build the principal files and copy them into the web/js/app, in order to use them into your views, be sure ton call the asset() method from Twig : 
+This command gonna build the principal files and copy them into the web/js/app/React, in order to use them into your views, be sure ton call the asset() method from Twig : 
 
 ```bash
 {% block javascripts %}
-   <!-- Global JS -->
-   <script src="{{ asset('js/app/request.js') }}"></script>
-   <script src="{{ asset('js/app/global.js') }}"></script>
+  <!-- Global JS -->
+  <script src="{{ asset('js/app/request.js') }}"></script>
+  <script src="{{ asset('js/app/React/global.js') }}"></script>
 {% endblock %}
 ```
 
-Here, the request.js file is used only for checking that the Ajax request is ready and functional.
+Here, the request.js file is used only for checking that the Ajax request is ready and functional, in production you can remove this file.
 
 ## Next step 
 
