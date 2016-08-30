@@ -34,3 +34,8 @@ var IndexBox = React.createClass({
        );
     }
 });
+
+ReactDOM.render(
+    <IndexBox/>,
+    document.getElementById('home')
+);

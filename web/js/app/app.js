@@ -1,0 +1,3 @@
+var React_Symfony = {
+
+};

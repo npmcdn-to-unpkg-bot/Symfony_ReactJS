@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "npm run build",
-    "build": "webpack -d",
+    "build": "webpack -d && cp web/js/prod/app/*.js web/js/app/",
     "build:prod": "webpack -p"
   },
   "repository": {

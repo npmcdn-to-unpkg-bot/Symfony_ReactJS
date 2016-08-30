@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 
-import { ArticleBox } from "./Composants/article_box";
+import { ArticleBox } from "./Composants/Index/article_box";
 
 class IndexBox extends React.Component {
     render() {
@@ -11,4 +11,4 @@ class IndexBox extends React.Component {
     }
 }
 
-render(<IndexBox />, document.getElementById('home'));
+render(<IndexBox/>, document.getElementById('home'));

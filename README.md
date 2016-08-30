@@ -1,68 +1,53 @@
-Symfony Standard Edition
-========================
+# ReactJS into Symfony !
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+Here it's the source code of the developpez.com tutorial about using ReactJS into Symfony 3, in order to use it like it need to be used, follow this simple step :
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+## Install everything with Composer : 
 
-What's inside?
---------------
+```bash
+php composer.phar install
+```
 
-The Symfony Standard Edition is configured with the following defaults:
+or 
 
-  * An AppBundle you can use to start coding;
+```bash
+composer install
+```
 
-  * Twig as the only configured template engine;
+## Node JS Installation
 
-  * Doctrine ORM/DBAL;
+Once everything is installed, let's bring the dependencies to life : 
 
-  * Swiftmailer;
+```bash
+npm install 
+```
 
-  * Annotations enabled for everything.
+In order to build the "dynamic" part of the application, we use Webpack and ReactJS, every files isn't include in this repository and you need to transpile with Babel in order to perform better JS code, here's the command :
 
-It comes pre-configured with the following bundles:
+```bash
+npm build
+```
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+This command gonna build the principal files and copy them into the web/js/app, in order to use them into your views, be sure ton call the asset() method from Twig : 
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+```bash
+{% block javascripts %}
+   <!-- Global JS -->
+   <script src="{{ asset('js/app/request.js') }}"></script>
+   <script src="{{ asset('js/app/global.js') }}"></script>
+{% endblock %}
+```
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+Here, the request.js file is used only for checking that the Ajax request is ready and functional.
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+## Next step 
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
+With all the files in check and the dependencies installed, it's time to launch something, to do this, two options are available :
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
+- Use the PHP Server :
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+```bash
+php bin/console server:run
+```
 
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
-
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
-
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  https://symfony.com/doc/3.0/book/installation.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/3.0/book/doctrine.html
-[8]:  https://symfony.com/doc/3.0/book/templating.html
-[9]:  https://symfony.com/doc/3.0/book/security.html
-[10]: https://symfony.com/doc/3.0/cookbook/email.html
-[11]: https://symfony.com/doc/3.0/cookbook/logging/monolog.html
-[13]: https://symfony.com/doc/3.0/bundles/SensioGeneratorBundle/index.html
+- Use Wamp, Mamp, Xamp.

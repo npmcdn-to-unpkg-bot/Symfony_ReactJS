@@ -5,3 +5,8 @@ var FooterBox = React.createClass({
         );
     }
 });
+
+ReactDOM.render(
+    <FooterBox/>,
+    document.getElementById('footer')
+);

@@ -13,23 +13,9 @@
         {% block body %}{% endblock %}
         <footer id="footer"></footer>
         {% block javascripts %}
-            <script src="{{ asset('js/React/react.min.js') }}"></script>
-            <script src="{{ asset('js/React/react-dom.min.js') }}"></script>
-            <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
-
-            <!-- ReactJS -->
-            <script src="{{ asset('js/Composants/header.react.js') }}" type="text/babel"></script>
-            <script src="{{ asset('js/Composants/footer.react.js') }}" type="text/babel"></script>
-            <script>
-                ReactDOM.render(
-                        <HeaderBox/>,
-                        document.getElementById('header')
-                );
-                ReactDOM.render(
-                        <FooterBox/>,
-                        document.getElementById('footer')
-                );
-            </script>
+            <!-- Global JS -->
+            <script src="{{ asset('js/app/request.js') }}"></script>
+            <script src="{{ asset('js/app/global.js') }}"></script>
         {% endblock %}
     </body>
 </html>

@@ -9,7 +9,7 @@ export class ArticleBox extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-12">
-                            <Article data={data} />
+                            <Article/>
                         </div>
                     </div>
                 </div>

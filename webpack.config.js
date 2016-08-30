@@ -5,10 +5,13 @@ var DIST_DIR = path.resolve(__dirname, "web/js/prod");
 var SRC_DIR = path.resolve(__dirname, "web/js/dev");
 
 var config = {
-    entry: SRC_DIR + "/index.js",
+    entry: {
+        global: SRC_DIR + "/global.js",
+        home: SRC_DIR + "/home.js"
+    },
     output: {
         path: DIST_DIR + "/app",
-        filename: "react.js",
+        filename: "[name].js",
         publicPath: "./web/"
     },
     module: {
