@@ -29,18 +29,17 @@ var config = {
         ],
         loaders: [
             {
-                test: [
-                    /\.js?/,
-                    /\.tsx?$/
-                ],
-                include: [SRC_DIR, TSX_DIR],
-                loader: [
-                    "babel-loader",
-                    "ts-loader"
-                ],
+                test: /\.js?/,
+                include: SRC_DIR,
+                loader: "babel-loader",
                 query: {
                     presets: ["react", "es2015", "stage-2"]
                 }
+            },
+            {
+                test: /\.tsx?$/,
+                include: TSX_DIR,
+                loader: "ts-loader"
             }
         ],
     },

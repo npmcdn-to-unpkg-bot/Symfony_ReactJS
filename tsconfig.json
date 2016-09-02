@@ -11,8 +11,7 @@
     "./node_modules"
   ],
   "files": [
-    "./typings/index",
-    "./web/typescript/Composants/Home",
+    "./typings/index.d.ts",
     "./web/typescript/index.tsx"
   ]
 }
