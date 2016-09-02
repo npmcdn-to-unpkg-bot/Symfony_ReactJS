@@ -1,6 +1,23 @@
 // The article who's gonna show the informations
 
 var Article = React.createClass({
+    getInitialState() {
+      return{data: []}
+    },
+    componentDidMount() {
+        $.ajax({
+            url: 'http://localhost/projets/symfony/ReactJS/React/web/app_dev.php/api/articles/get',
+            method: "GET",
+            cache: false,
+            dataType: 'json',
+            success: function (data) {
+                this.setState({data: data});
+            }.bind(this),
+            error: function (xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }.bind(this)
+        });
+    },
     render() {
         return (
             <div className="article_bloc">

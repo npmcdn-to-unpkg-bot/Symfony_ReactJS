@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "./web/js/prod/typescript",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react"
+  },
+  "exclude": [
+    "./node_modules"
+  ],
+  "files": [
+    "./typings/index",
+    "./web/typescript/Composants/Home",
+    "./web/typescript/index.tsx"
+  ]
+}
