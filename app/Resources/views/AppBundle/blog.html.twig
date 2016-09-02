@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Blog{% endblock %}
+
+{% block body %}
+    <section id="blog"></section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/app/React/typescript_blog.js') }}"></script>
+{% endblock %}

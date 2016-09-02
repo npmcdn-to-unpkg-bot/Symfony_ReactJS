@@ -72,9 +72,20 @@ class Blog
     {
         $articles = $this->doctrine->getRepository('AppBundle:Article')->findAll();
 
+        $article = [];
+
+        foreach ($articles as $item) {
+            $article = [
+                'id' => $item->getId(),
+                'libelle' => $item->getLibelle(),
+                'date' => $item->getDateCreated(),
+                'author' => $item->getAuthor()
+            ];
+        }
+
         $this->serializer->serialize($articles, 'json');
 
-        return $articles;
+        return $article;
     }
 
     /**

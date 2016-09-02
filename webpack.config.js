@@ -9,7 +9,9 @@ var config = {
     entry: {
         global: SRC_DIR + "/global.js",
         home: SRC_DIR + "/home.js",
-        typescript: TSX_DIR + "/index.tsx"
+        typescript: TSX_DIR + "/index.tsx",
+        typescript_blog: TSX_DIR + "/blog.tsx",
+        typescript_contact: TSX_DIR + "/contact.tsx"
     },
     output: {
         path: DIST_DIR + "/app",

@@ -9,7 +9,15 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        <header id="header"></header>
+        <header>
+            <ul>
+                <li><a href="{{ path('homepage') }}">Accueil</a></li>
+                <li><a href="{{ path('blog') }}">Blog</a></li>
+                <li><a href="{{ path('contact') }}">Labs</a></li>
+                <li><a href="{{ path('contact') }}">Forums</a></li>
+                <li><a href="{{ path('contact') }}">Contact</a></li>
+            </ul>
+        </header>
         {% block body %}{% endblock %}
         <footer id="footer"></footer>
         {% block javascripts %}
@@ -25,6 +33,9 @@
             <!-- ReactJS -->
             <script src="https://npmcdn.com/react@15.3.1/dist/react.js"></script>
             <script src="https://npmcdn.com/react-dom@15.3.1/dist/react-dom.js"></script>
+
+            <!-- Local ReactJS -->
+            <script src="{{ asset('js/app/React/typescript.js') }}"></script>
         {% endblock %}
     </body>
 </html>
