@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./web/js/prod/typescript",
+    "outDir": "./web/prod/typescript",
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "commonjs",
@@ -12,6 +12,6 @@
   ],
   "files": [
     "./typings/index.d.ts",
-    "./web/typescript/index.tsx"
+    "./web/dev/Typescript/index.tsx"
   ]
 }

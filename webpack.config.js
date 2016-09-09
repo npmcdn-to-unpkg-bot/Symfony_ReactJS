@@ -1,20 +1,20 @@
 var webpack = require('webpack');
 var path = require("path");
 
-var DIST_DIR = path.resolve(__dirname, "web/js/prod");
-var SRC_DIR = path.resolve(__dirname, "web/js/dev");
-var TSX_DIR = path.resolve(__dirname, "web/typescript/");
+var PROD_DIR = path.resolve(__dirname, "web/prod");
+var DEV_DIR = path.resolve(__dirname, "web/dev");
+var TSX_DIR = path.resolve(__dirname, "web/dev/Typescript/");
 
 var config = {
     entry: {
-        global: SRC_DIR + "/global.js",
-        home: SRC_DIR + "/home.js",
-        typescript: TSX_DIR + "/index.tsx",
-        typescript_blog: TSX_DIR + "/blog.tsx",
-        typescript_contact: TSX_DIR + "/contact.tsx"
+        global: DEV_DIR + "/global.js",
+        home: DEV_DIR + "/home.js",
+        'index': TSX_DIR + "/index.tsx",
+        'blog': TSX_DIR + "/blog.tsx",
+        'contact': TSX_DIR + "/contact.tsx"
     },
     output: {
-        path: DIST_DIR + "/app",
+        path: PROD_DIR + "/app",
         filename: "[name].js",
         publicPath: "./web/"
     },
@@ -32,7 +32,7 @@ var config = {
         loaders: [
             {
                 test: /\.js?/,
-                include: SRC_DIR,
+                include: DEV_DIR,
                 loader: "babel-loader",
                 query: {
                     presets: ["react", "es2015", "stage-2"]

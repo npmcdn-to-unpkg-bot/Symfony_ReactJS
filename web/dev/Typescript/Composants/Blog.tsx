@@ -4,8 +4,10 @@ export interface BlogProps {}
 
 export class Blog extends React.Component <BlogProps, {}> {
     render() {
-        return <div>
+        return (
+            <div>
                 <p>Un futur roman en devenir !</p>
-               </div>
+            </div>
+        )
     }
 }

@@ -16,21 +16,12 @@ export class Data {
      *
      * @returns {XMLHttpRequest}
      */
-    getData(url: string) {
+    public getData(url: string) {
         var ajax = new XMLHttpRequest();
         ajax.open("GET", url);
-        ajax.addEventListener("load", function () {
-            console.log(ajax)
-        });
         ajax.send(null);
+        var articles = JSON.parse(ajax.responseText);
 
-        return ajax;
-    }
-
-    /**
-     * Allow to return the array.
-     */
-    returnData() {
-
+        return articles;
     }
 }
