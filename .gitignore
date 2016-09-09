@@ -20,4 +20,5 @@
 .idea/
 
 # ReactJS files compiled
-web/prod/app/*
+web/prod/app/css/*
+web/prod/app/js/*

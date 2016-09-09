@@ -2,13 +2,13 @@
   "name": "react_symfony",
   "version": "1.0.0",
   "description": "A simple case of using ReactJS into Symfony",
-  "main": "web/app/app.js",
+  "main": "web/prod/app/js/main.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
     "start": "npm run build",
-    "build": "webpack -d && cp ./web/dev/css/*.css ./web/prod/app/",
+    "build": "webpack -d && cp ./web/dev/css/*.css ./web/prod/app/css",
     "build:prod": "webpack -p"
   },
   "repository": {
